@@ -4,7 +4,7 @@ import { productRouter } from './routes/product.route.js'
 import { movieRouter } from './routes/movie.route.js'
 import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
-import cors from 'cors'
+// import cors from 'cors'
 
 mongoose.set('useFindAndModify', false);
 
@@ -14,7 +14,7 @@ const port = process.env.PORT || 5050
 
 const app = express()
 
-app.use(cors())
+// app.use(cors())
 
 app.use(express.urlencoded({extended: true}))
 
