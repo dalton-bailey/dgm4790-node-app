@@ -2,9 +2,10 @@ import express from 'express'
 import { apiRouter } from './routes/api.route.js'
 import { productRouter } from './routes/product.route.js'
 import { movieRouter } from './routes/movie.route.js'
+import { fossilRouter } from './routes/fossil.route.js'
 import mongoose from 'mongoose'
 import * as dotenv from 'dotenv'
-// import cors from 'cors'
+import cors from 'cors'
 
 mongoose.set('useFindAndModify', false);
 
@@ -14,7 +15,7 @@ const port = process.env.PORT || 5050
 
 const app = express()
 
-// app.use(cors())
+app.use(cors())
 
 app.use(express.urlencoded({extended: true}))
 
@@ -27,6 +28,8 @@ app.use('/api', apiRouter)
 app.use('/product', productRouter)
 
 app.use('/movie', movieRouter)
+
+app.use('/fossil', fossilRouter)
 
 app.use((req, res, next) => {
     res.status(404).send('<h1>Page not found</h1>')

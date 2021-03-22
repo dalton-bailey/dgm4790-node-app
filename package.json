@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon index.js",
-    "seed": "node seed/loadIMDB.js"
+    "seed": "node seed/loadACNH.js"
   },
   "author": "Bailey Dalton",
   "license": "ISC",
