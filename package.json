@@ -5,6 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "postinstall": "cd client && npm install",
+    "start-dev": "nodemon index.js",
+    "build": "cd client && npm run build",
     "start": "node index.js",
     "seed": "node seed/loadACNH.js"
   },

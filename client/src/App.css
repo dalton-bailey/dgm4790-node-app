@@ -1,0 +1,208 @@
+body {
+  background-color: #120f18;
+}
+.App {
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  background-color: #120f18;
+  color: white;
+}
+
+.fish, .bugs, .villagers, .creatures, .fossils {
+  display: flex;
+  flex-direction: column;
+  background-color: #120f18;
+  color: white;
+  margin: -24px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid #1a1c25; */
+  margin: 20px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  background-color: #1f1d29;
+  color: white;
+}
+
+.listItemContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+}
+
+
+.listItem p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItemHeader {
+  display: flex;
+  align-items: center;
+}
+
+.listItemHeader img {
+  margin-left: 10px;
+}
+
+.listItemHeader p {
+  margin-left: 5px;
+}
+
+.listItemHeader img {
+  height: 40px;
+}
+
+.listItemContent img {
+  height: 100px;
+}
+
+.listItemContentFish img, .listItemContentBugs img {
+  height: 50px;
+}
+
+.listItemContentFossils {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnList {
+  align-self: flex-end;
+}
+
+.btn {
+  background: none;
+  color: white;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.fossil {
+  align-self: center;
+}
+
+.attributes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.attribute {
+  display: flex;
+  align-items: center;
+}
+
+.attribute p {
+  margin-left: 10px;
+}
+
+.saying {
+  font-size: 10px;
+  max-width: 100px;
+}
+
+
+/* home menu buttons */
+
+.homeMenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menuItem {
+  width: 125px;
+  height: 125px;
+  background-color: #1f1d29;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 20px 0px 0px 0px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .menuItem {
+    width: 70px;
+    height: 70px;
+  }
+  .icon {
+    font-size: 30px;
+  }
+  .menuItem p {
+    display: none;
+  }
+}
+
+/* scroll to top */
+
+.scrollTop {
+  position: fixed; 
+  width: 100%;
+  bottom: 20px;
+  align-items: center;
+  height: 40px;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+
+
+
+
