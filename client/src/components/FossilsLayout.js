@@ -81,7 +81,7 @@ const Fossils = () => {
 
   const handleUpdate = async (values) => {
     try {
-      const result = await axios.put(`http://localhost:${PORT}fossil/update`, {
+      const result = await axios.put(`http://localhost:${PORT}/fossil/update`, {
         data: {
           fossilId: values.id,
           name: values.name,
