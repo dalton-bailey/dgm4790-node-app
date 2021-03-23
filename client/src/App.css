@@ -90,10 +90,8 @@ body {
   align-self: flex-end;
 }
 
-.btn {
-  background: none;
-  color: white;
-  border: none;
+.MuiSvgicon-root {
+  color:white;
 }
 
 .btn:hover {
