@@ -20,7 +20,7 @@ body {
 .fossils {
   display: flex;
   flex-direction: column;
-  color: #120f18;
+  color: white;
   margin: -24px;
 }
 
