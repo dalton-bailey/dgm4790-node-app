@@ -54,7 +54,6 @@ const Fossils = () => {
   const [searchValue, setSearchValue] = React.useState("");
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
-  const [newOpen, setNewOpen] = useState(false)
 
   const handleDelete = async () => {
     setDeleteOpen(false);
@@ -79,17 +78,6 @@ const Fossils = () => {
   const handleCloseEdit = () => {
     setEditOpen(false);
   };
-
-  const handleNew = () => {
-  }
-
-  const handleClickNewOpen = () => {
-    setNewOpen(true)
-  }
-
-  const handleCloseNew = () => {
-    setNewOpen(false)
-  }
 
   const handleUpdate = async (values) => {
     try {
@@ -187,105 +175,9 @@ const Fossils = () => {
         </div>
       </div>
       <IconButton>
-        <AddIcon onClick={() =>  handleClickNewOpen()}/>
+        <AddIcon />
       </IconButton>
       <Dialog open={editOpen} onClose={handleCloseEdit}>
-        <Formik
-          initialValues={{
-            id: selectedFossil?._id,
-            name: selectedFossil?.name,
-            image: selectedFossil?.image,
-            price: selectedFossil?.price,
-          }}
-          validationSchema={Yup.object().shape({
-            name: Yup.string("Enter fossil name.").required("Name is required"),
-            image: Yup.string("Image URL"),
-            price: Yup.number("Price"),
-          })}
-          onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-            try {
-              await handleUpdate(values);
-              handleCloseEdit();
-            } catch (err) {
-              console.error(err);
-              setStatus({ success: false });
-              setErrors({ submit: err.message });
-              setSubmitting(false);
-            }
-          }}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-          }) => (
-            <form
-              noValidate
-              autoComplete="off"
-              onSubmit={handleSubmit}
-              className={classes.dialogContent}
-            >
-              <DialogTitle>Edit Fossil</DialogTitle>
-              <DialogContent>
-                <DialogContentText>
-                  Make changes below to the data about this fossil
-                </DialogContentText>
-                <TextField
-                  autoFocus
-                  id="name"
-                  name="name"
-                  label="Fossil Name"
-                  type="text"
-                  fullWidth
-                  value={values.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  error={Boolean(touched.name && errors.name)}
-                  helperText={touched.name && errors.name}
-                />
-                  <TextField
-                    autoFocus
-                    id="image"
-                    name="image"
-                    label="Image URL"
-                    type="text"
-                    fullWidth
-                    value={values.image}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={Boolean(touched.image && errors.image)}
-                    helperText={touched.image && errors.image}
-                  /> 
-                   <TextField
-                    autoFocus
-                    id="price"
-                    name="price"
-                    label="Price"
-                    fullWidth
-                    value={values.price}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    error={Boolean(touched.price && errors.price)}
-                    helperText={touched.price && errors.price}
-                  />
-              </DialogContent>
-              <DialogActions>
-                  <Button onClick={handleCloseEdit}>
-                      Cancel
-                  </Button>
-                  <Button type="submit">
-                      Save
-                  </Button>
-              </DialogActions>
-            </form>
-          )}
-        </Formik>
-      </Dialog>
-      <Dialog open={newOpen} onClose={handleCloseNew}>
         <Formik
           initialValues={{
             id: selectedFossil?._id,
