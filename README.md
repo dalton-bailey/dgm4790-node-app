@@ -1,4 +1,4 @@
-##Deploed using DigitalOcean
+## Deployed using DigitalOcean
 
 [https://dgm-4790-node-app-53t8z.ondigitalocean.app/fossils](https://dgm-4790-node-app-53t8z.ondigitalocean.app/fossils)
 
@@ -6,7 +6,7 @@
 
 You can delete and edit each fossil
 
-###Delete
+### Delete
 ```javascript
   const handleDelete = async () => {
     setDeleteOpen(false);
@@ -24,7 +24,7 @@ You can delete and edit each fossil
   };
 ```
 
-###Edit
+### Edit
 
 ```javascript
   const handleUpdate = async (values) => {
@@ -46,7 +46,7 @@ You can delete and edit each fossil
   };
 ```
 
-###Get Endpoints
+### Get Endpoints
 
 ```javascript
 fossilRouter.get('/', fossils)
@@ -56,19 +56,19 @@ fossilRouter.get('/id', getFossilById)
 fossilRouter.get('/trex', getMostExpensiveFossil)
 ```
 
-###Delete Endpoint
+### Delete Endpoint
 
 ```javascript
 fossilRouter.delete('/delete', deleteFossil)
 ```
 
-###Put Endpoint
+### Put Endpoint
 
 ```javascript
 fossilRouter.put('/update', updateFossil)
 ```
 
-###Post Endpoint
+### Post Endpoint
 
 ```javascript
 fossilRouter.post('/', postAddFossil)
