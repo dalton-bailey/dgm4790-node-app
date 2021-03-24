@@ -1,6 +1,6 @@
 ## Deployed using DigitalOcean
 
-[https://dgm-4790-node-app-53t8z.ondigitalocean.app/fossils](https://dgm-4790-node-app-53t8z.ondigitalocean.app/fossils)
+[https://dgm-4790-node-app-53t8z.ondigitalocean.app](https://dgm-4790-node-app-53t8z.ondigitalocean.app)
 
 *Takes a while for fossils to load in
 
